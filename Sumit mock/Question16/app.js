@@ -1,17 +1,26 @@
-const findBtn = document.querySelector("#find");
-const outPut = document.querySelector("#output");
+const checkBtn = document.querySelector("#find")
+const outPut = document.querySelector("#output")
 
 let ramData = {
     name: "ram",
-    age: "27",
     power: "2500",
-    yuga: "treta"
+    yuga: "Treta"
 }
-
-let krishnaData ={
+let KrishnaData = {
     name: "krishna",
-    age: "30",
-    power: "2300",
-    yuga: "Dwaper"
+    power: "2325",
+    yuga: "Dwapar"
 }
 
+
+function totalPower(ramData, krishnaData){
+    const totalPowerRam = (Number(ramData.power) + Number(ramData.name.length)) * 35;
+    const totalPowerKrishna = (Number(krishnaData.power) + Number(krishnaData.name.length)) * 35;
+    if(totalPowerRam > totalPowerKrishna){
+        outPut.innerText = `Ram is more powerful, ram has power=${totalPowerRam} and krishna power=${totalPowerKrishna}`
+    }else{
+        outPut.innerText = `krishna is more powerful,  ram has power=${totalPowerRam} and krishna power=${totalPowerKrishna}`
+    }
+}
+
+checkBtn.addEventListener("click",function (){totalPower(ramData,KrishnaData)})
