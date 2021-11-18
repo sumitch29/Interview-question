@@ -1,1 +1,0 @@
-Create two objects with name, age, yuga and power as Ram, 2500, Treta. Krishna, 2325, Dwapar Write a function which takes two objects and return the person with more power.
