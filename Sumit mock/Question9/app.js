@@ -1,7 +1,8 @@
 const callBtn = document.querySelector('#callbtn');
 const outputDiv = document.querySelector('#output');
 
-const URL = "https://jsonplaceholder.typicode.com/dummyUsers"
+const URL = "https://unitube-server.herokuapp.com/playlists"
+//const URL = " "https://jsonplaceholder.typicode.com/dummyUsers"
 
 callBtn.addEventListener('click',clickHandler)
 
