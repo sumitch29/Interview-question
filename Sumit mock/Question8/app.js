@@ -6,7 +6,7 @@ const URL = "https://jsonplaceholder.typicode.com/dummyUsers"
 function clickHandler(){
     fetch(URL)
     .then(error =>{
-            if(error.status === 401){
+            if(error.status === 404){
                 outPut.innerText = `${error.status} you are not logged in`
             }else{
                 outPut.innerText = `${error.status} page not found`
