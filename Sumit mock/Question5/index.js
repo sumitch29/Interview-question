@@ -4,16 +4,14 @@ const studentData = [] ;
 for(let i=1 ; i <=2 ; i++ ) {
   var student = {
     name : readlineSync.question(`Enter the name of student  ${i} \n` ),
-    unitTestMark : Number(readlineSync.question("Enter the unit Test Mark of the student \n ")),
-    preFinalMark :Number( readlineSync.question("Enter the pre Final Mark of the student \n")),
-    finalMark :Number( readlineSync.question("Enter the final Mark  of the student \n")),
-    sumTotalMark : function () {
+     unitTestMark : Number(readlineSync.question("Enter the unit Test Mark of the student \n ")),
+      preFinalMark :Number( readlineSync.question("Enter the pre Final Mark of the student \n")),
+       finalMark :Number( readlineSync.question("Enter the final Mark  of the student \n")),
+        sumTotalMark : function () {
       return  this.unitTestMark + this.preFinalMark + this.finalMark ;
     }
 }
 studentData.push(student) 
-
-
 }
 
 function getHighestMark (studentData) {

@@ -1,17 +1,12 @@
 const callBtn = document.querySelector("#call");
 const outPut = document.querySelector("#output");
 
-const URL = "https://jsonplaceholder.typicode.com/dummyUsers"
+const URL = "https://unitube-server.herokuapp.com/playlists"
 
-function clickHandler(){
-    fetch(URL)
-    .then(error =>{
-            if(error.status === 404){
-                outPut.innerText = `${error.status} you are not logged in`
-            }else{
-                outPut.innerText = `${error.status} page not found`
-            }
-        })
-    }
+callBtn.addEventListener('click',clickHandler)
 
-callBtn.addEventListener('click',clickHandler);
+function clickHandler () {
+    fetch(URL) 
+    .then(response => response.json())
+    .then(data => outPut.innerText = `${data.message}`)
+}

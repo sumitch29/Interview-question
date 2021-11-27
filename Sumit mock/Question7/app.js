@@ -8,9 +8,8 @@ var URL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text="
 function clickHandler (text) {
     fetch(URL + text )
     .then(Response => Response.json()  ) 
-    .then(
-        data => {
-            outputDiv.innerText = `${data.contents.translated} ${(data.contents.text).toUpperCase() }`
+    .then(data => {
+            outputDiv.innerText = `${data.contents.translated} ${(data.contents.text).toUpperCase()}`
         }
     )
 }
