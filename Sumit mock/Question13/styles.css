@@ -1,0 +1,12 @@
+:root{
+    --primary-color : red;
+    --secondary-color : green;
+}
+
+#h1, #button1{
+    color : var(--primary-color);
+}
+
+#h2, #button2{
+    color : var(--secondary-color)
+}
