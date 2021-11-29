@@ -5,6 +5,15 @@ const URL = "https://unitube-server.herokuapp.com/playlists"
 
 callBtn.addEventListener('click',clickHandler)
 
+function clickHandler () {
+ fetch(URL)
+.then(data =>{
+    outPut.innerText = ` ${data.statusText} ${data.status}`
+})
+
+}
+
+
 // function clickHandler () {
 //     fetch(URL) 
 //     .then(response => response.json())
@@ -33,7 +42,7 @@ callBtn.addEventListener('click',clickHandler)
 // }
 
 
-function clickHandler () {
-    fetch(URL) 
-    .then(response =>  outPut.innerText = `${response.status}  ${response.message}`)
-}
+// function clickHandler () {
+//     fetch(URL) 
+//     .then(response =>  outPut.innerText = `${response.status}  ${response.message}`)
+// }
